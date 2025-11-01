@@ -3,7 +3,10 @@
 </template>
 
 <script setup lang="ts">
-import { currentBase } from '../stores/beverage';
+import { storeToRefs } from 'pinia';
+import { useBeverageStore } from '../stores/beverageStore';
+
+const { currentBase } = storeToRefs(useBeverageStore());
 
 </script>
 

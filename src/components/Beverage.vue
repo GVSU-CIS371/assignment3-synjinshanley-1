@@ -4,10 +4,10 @@
     <Hot v-else />
     <Contents>
       <template v-slot:top>
-        <Creamer v-if="currentCream !== 'transparent'"/>
+        <Creamer v-if="beverageStore.currentCream !== 'transparent'"/>
       </template>
       <template v-slot:mid>
-        <Syrup v-if="currentSyrup !== '#c6c6c6'"/>
+        <Syrup v-if="beverageStore.currentSyrup !== '#c6c6c6'"/>
       </template>
       <template v-slot:bottom>
         <Base />
@@ -23,9 +23,8 @@ import Base from "./Base.vue";
 import Creamer from "./Creamer.vue";
 import Hot from "./Hot.vue";
 import Cold from "./Cold.vue";
-import { currentSyrup } from "../stores/beverage";
-import { currentCream } from "../stores/beverage";
-
+import { useBeverageStore } from '../stores/beverageStore';
+const beverageStore = useBeverageStore();
 type Props = {
   isIced: boolean;
 };

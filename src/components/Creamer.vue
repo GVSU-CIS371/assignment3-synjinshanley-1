@@ -5,7 +5,11 @@
 </template>
 
 <script setup lang="ts">
-import { currentCream } from '../stores/beverage';
+import { storeToRefs } from 'pinia';
+import { useBeverageStore } from '../stores/beverageStore';
+
+const { currentCream } = storeToRefs(useBeverageStore());
+
 </script>
 <style lang="scss" scoped>
 .froth {
