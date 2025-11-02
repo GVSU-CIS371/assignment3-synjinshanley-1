@@ -68,6 +68,7 @@
             <input
               type="radio"
               name="drink"
+              @click="beverageStore.showBeverage(drink)"
               :id="`r${drink.id}`"
               :value="drink.name"
             />

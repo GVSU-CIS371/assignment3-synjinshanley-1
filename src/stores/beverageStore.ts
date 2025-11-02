@@ -21,7 +21,7 @@ export const useBeverageStore = defineStore("BeverageStore", {
   actions: {
     makeBeverage(name: string) {
       const newBeverage = {
-        id: this.currentTemp + this.currentBase + this.currentCream + this.currentSyrup,
+        id: this.currentTemp + this.currentBase.id + this.currentCream.id + this.currentSyrup.id,
         name,
         temp: this.currentTemp,
         base: { id: this.currentBase.id, name: this.currentBase.name, color: this.currentBase.color},
@@ -30,7 +30,20 @@ export const useBeverageStore = defineStore("BeverageStore", {
       }
       this.drinks.push(newBeverage);
     },
-    showBeverage() {},
+    showBeverage(drink: BeverageType) {
+      const find = this.drinks.find(bev => bev.id === drink.id)
+      if (find){
+        if (find.id === drink.id) {
+        this.currentBase = drink.base
+        this.currentTemp = drink.temp
+        this.currentCream = drink.creamer
+        this.currentSyrup = drink.syrup
+        console.log(this.currentTemp)
+        } else {
+        console.log('error')
+        }
+      }
+    },
   },
-  persist: false,
+  persist: true,
 });
