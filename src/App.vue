@@ -82,6 +82,7 @@
 import Beverage from "./components/Beverage.vue";
 import { useBeverageStore } from "./stores/beverageStore";
 const beverageStore = useBeverageStore();
+var name: string;
 </script>
 
 <style lang="scss">

@@ -38,12 +38,11 @@ export const useBeverageStore = defineStore("BeverageStore", {
         this.currentTemp = drink.temp
         this.currentCream = drink.creamer
         this.currentSyrup = drink.syrup
-        console.log(this.currentTemp)
         } else {
         console.log('error')
         }
       }
     },
   },
-  persist: true,
+  persist: false,
 });
