@@ -1,6 +1,6 @@
 <template>
   <div class="froth">
-    <div :style="{ backgroundColor: beverageStore.currentCream}" v-for=" in 5" class="foam"></div>
+    <div :style="{ backgroundColor: beverageStore.currentCream.color}" v-for=" in 5" class="foam"></div>
   </div>
 </template>
 

@@ -21,7 +21,7 @@ export const useBeverageStore = defineStore("BeverageStore", {
   actions: {
     makeBeverage(name: string) {
       const newBeverage = {
-        id: this.currentTemp + this.currentBase.id + this.currentCream.id + this.currentSyrup.id,
+        id: this.currentTemp + this.currentBase + this.currentCream + this.currentSyrup,
         name,
         temp: this.currentTemp,
         base: { id: this.currentBase.id, name: this.currentBase.name, color: this.currentBase.color},
@@ -32,5 +32,5 @@ export const useBeverageStore = defineStore("BeverageStore", {
     },
     showBeverage() {},
   },
-  persist: true,
+  persist: false,
 });

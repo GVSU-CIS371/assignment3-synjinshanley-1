@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ backgroundColor: beverageStore.currentSyrup}"  class="syrup"></div>
+  <div :style="{ backgroundColor: beverageStore.currentSyrup.color}"  class="syrup"></div>
 </template>
 
 <script setup lang="ts">

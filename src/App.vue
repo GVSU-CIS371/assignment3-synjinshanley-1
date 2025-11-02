@@ -23,7 +23,7 @@
               type="radio"
               name="Base"
               :id="`r${base.id}`"
-              :value="base.color"
+              :value="base"
               v-model="beverageStore.currentBase"
             />
             {{ base.name }}
@@ -37,7 +37,7 @@
               type="radio"
               name="Creamer"
               :id="`r${creamer.id}`"
-              :value="creamer.color"
+              :value="creamer"
               v-model="beverageStore.currentCream"
             />
             {{ creamer.name }}
@@ -51,7 +51,7 @@
               type="radio"
               name="Syrup"
               :id="`r${syrup.id}`"
-              :value="syrup.color"
+              :value="syrup"
               v-model="beverageStore.currentSyrup"
             />
             {{ syrup.name }}
